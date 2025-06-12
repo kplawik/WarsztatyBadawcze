@@ -1,0 +1,38 @@
+*.DS_Store
+
+# Pliki tymczasowe LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.lot
+*.lof
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.xdv
+*.pdfsync
+*.run.xml
+
+# Pliki tymczasowe edytorów
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# Dla Overleaf lub latexmk
+latex.out/
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.xdy
