@@ -1,7 +1,10 @@
 \documentclass{report}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage{enumitem}
 \usepackage{color}
+
+\setlist[itemize]{label=\textbullet}
 
 \begin{document}
 \include{01_titlepage}
@@ -10,6 +13,6 @@
 \include{02_czesc_i}
 \include{03_czesc_ii}
 \begin{thebibliography}{10}
+[1] J. M. Stokes et al., “A Deep Learning Approach to Antibiotic Discovery,” Cell, vol. 180, no. 4, pp. 688-702.e13, Feb. 2020, doi: 10.1016/j.cell.2020.01.021.
 \end{thebibliography}
-\listoffigures
 \end{document}

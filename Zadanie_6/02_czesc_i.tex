@@ -1,0 +1,58 @@
+\section{Przekaz główny artykułu}
+“A Deep Learning Approach to Antibiotic Discovery”
+\subsection{Kontekst artykułu}
+Artykuł naukowy przedstawiający przełomowe odkrycie pierwszego nowego antybiotyku po 30 latach (halicyny, charakteryzującej się odmienną strukturą molekularną w porównaniu z aktualnie stosowanymi antybiotykami) poprzez przeprowadzenie najpierw analizy wielu różnych zbiorów danych z zastosowaniem głębokich sieci neuronowych, a następnie testów laboratoryjnych, które potwierdziły działanie bakteriobójcze.
+Dziedzina badawcza:
+Artykuł dotyczy zarówno medycyny jak i informatyki ze względu na wykorzystanie wiedzy domenowej o antybiotykach, uczenia maszynowego z dziedziny informatyki oraz elementów statystyki do potwierdzenia zawartych w nim wniosków.
+
+\subsection{Problem badawczy}
+Wytrenowanie głębokiej sieci neuronowej w celu znalezienia molekuły o własnościach bakteriobójczych, ale jednocześnie różniącej się pod względem struktury od znanych już antybiotyków oraz wykazującej jak najniższą toksyczność. Predykcje zostały przeprowadzone na bibliotece zatwierdzonej przez US Food and Drug Administration (FDA), zawierających 1,769 różnych cząsteczek powiększonych o 800 innych naturalnych (uzyskanych np. z roślin), które umożliwiły wyodrębnienie hialicyny. Ponadto, przeprowadzono dodatkowe predykcje na bibliotece ZINC15, zawierającej ponad 107 milionów cząsteczek, uzyskując kolejne 23 cząsteczki, które mogą byc potencjalnymi antybiotykami. Zbiór liczył ponad 107 milionów molekuł z bazy ZINC15 a do empirycznych testów sieć neuronowa wytypowała 23 molekuły, jedną z nich była właśnie hialicyna.
+
+\subsection{Stan Wiedzy - Wyniki innych badaczy}
+Artykuł ma bogatą bibliografię zarówno, jeśli chodzi o stan współczesnej wiedzy o antybiotykach (m.in. „New antibiotics from bacterial natural products” czy “Antibacterial drug discovery in the resistance era”) jak i o wykorzystaniu uczenia maszynowego w biomedycynie (m.in. „Next-generation machine learning for biological networks.”, „A graph-convolutional neural network model for the prediction of chemical reactivity” czy “Using machine learning to predict suitable conditions for organic reactions”). W artykule nie zostały jednak podane wyniki innych badaczy podejmujących próbę predykcji struktury nowych antybiotyków, zostało opisane jedynie ogólne podejście do tematyki oraz obiecujący rozwój głębokich sieci neuronowych.
+
+\subsection{Moje badania: Metoda badawcza}
+\begin{enumerate}
+    \item Dobór i przygotowanie danych: Zbiór uczący składał się z 2335 związków (po usunięciu duplikatów, będących wynikiem złączenia różnych bibliotek): leków zatwierdzonych przez FDA oraz naturalnych produktów, testowanych pod kątem zahamowania wzrostu Escherichia coli. Wytrenowany zaś model testował ponad 107 milionów molekuł z bazy ZINC15.
+    \item Reprezentacja molekuł: Cechy 2335 molekuł zostały zwektoryzowane a wiązania międzycząsteczkowe przedstawione w formach grafów skierowanych.
+    \item Trening i walidacja modelu: Do treningu użyto sieci konwolucyjnej a konkretnie Directed Message Passing Neural Network (D-MPNN) a skuteczność modelu oceniono głównie za pomocą krzywych ROC-AUC (wartość 0.896)
+    \item Predykcja i selekcja: z bazy ponad 107 milionów cząsteczek (molekuł) do testów empirycznych wybrano 23 związki.
+    \item Walidacja empiryczna: Przeprowadzono zarówno testy in vitro (czyli wykazano bakteriobójczość na poziomie komórkowym) jak i testy in vivo (czyli wykazano skuteczność na organizmach żywych. W tym wypadku potwierdzono skuteczność Hialicyny na myszach)
+\end{enumerate}
+
+
+\subsection{Najważniejsze wyniki}
+Wyniki są rozległe i dokładnie opisane. Przedstawiają wyniki zarówno z perspektywy walidacji modelu uczenia maszynowego (m.in. analiza krzywych ROC-AUC, typowanie kandydatów z bazy) jak i przeprowadzonych testów in vitro i in vivo (pomiary skuteczność wg modeli Murine, BALB, A.Baumannii czy skuteczność wobec bakterii C. difficile). Wyniki bogato ilustrowane dokładnie opisanymi wykresami.
+
+\subsection{Kluczowe wnioski}
+Artykuł przedstawia cztery kluczowe wnioski:
+\begin{enumerate}
+    \item Model sieci głębokiej został wytrenowany, aby przewidzieć antybiotyk na bazie już istniejących struktur
+    \item Hialicyna została wytypowana jako antybakteryjna cząsteczka z bazy Drug Repurposing Hub.
+    \item Testy na myszach wykazały skuteczność jako antybiotyku
+    \item Kolejne antybiotyki o odmiennych strukturach zostało przewidzianych na bazie danych ZINC15.
+\end{enumerate}
+
+\subsection{Jaka z tego wynika historia}
+Historia jest taka, że nawet jeśli przez 30 lat nie opracowano nowego antybiotyku to warto próbować, ponieważ Uczenie Maszynowe daje możliwość analizy ogromnych zbiorów danych i potrafi zawęzić poszukiwania tak że można zastosować testy empiryczne. Prócz odkrytej hialicyny w/w artykuł nadmienia, że kolejne związki (8 z wytypowanych 23 wykazało pożądane własności) będą również testowane pod kątem użyteczności medycznej.
+
+\subsection{Jaki przekaz główny wynika z tej historii}
+Przekaz jest taki, że interdyscyplinarność umożliwiła opracowanie nowego antybiotyku, co przypomnę, ostatni raz miało miejsce ponad 30 lat temu. Dodatkowo 8 z 23 wytypowanych związków będzie jeszcze badanych laboratoryjnie, gdyż wykazały one pożądane właściwości.
+
+\subsection{Jak wzbogaci dorobek naukowy?}
+\begin{itemize}
+    \item Artykuł został opublikowany w 2020 roku w czasopiśmie Cell, którego współczynnik impact factor jest bardzo wysoki i wynosi ok. 45,5.
+    \item Artykuł został napisany przez 18 pracowników z USA i Kanady z tytułem doktora lub profesora, specjalizujących się w wielu różnych dziedzinach, w tym farmacji, genetyki, biotechnologii i sztucznej inteligencji.
+    \item Liczba cytowań artykułu wynosi 1,312.
+\end{itemize}
+
+\subsection{Co doda do dziedziny naukowej?}
+Nowy antybiotyk: Hialicynę i 8 związków do kolejnych badan laboratoryjnych.
+
+
+\subsection{Jak pomoże osobom trzecim?}
+Głównym celem przeprowadzonych badań było odkrycie antybiotyku na bakterie wykazujące odporność na znane już antybiotyki. W artykule wymieniono, że odkryta Hialicyna wykazało skuteczność w walce z bakteriami E. coli, Clostridioides difficile oraz Acinetobacter baumannii – a to już bezpośrednio przełoży się na niższą śmiertelność, krótszą haspitalizacje czy zmniejszenie ryzyka występowania epidemii.\\
+
+Istone jest również 8 związków wytypowanych do dalszych badań.\\
+
+Wytrenowany model również być pomocny w podobnych badaniach.\\

@@ -1,0 +1,63 @@
+\section{Szablon artykułu naukowego}
+
+\subsection{Tytuł roboczy}
+“A Deep Learning Approach to Antibiotic Discovery”
+
+\subsection{Autorzy}
+Jonathan M. Stokes, Kevin Yang, Kyle Swanson, Wengong Jin, Andres Cubillos-Ruiz, Nina M. Donghia, Craig R. MacNair, Shawn French, Lindsey A. Carfrae, Zohar Bloom-Ackermann, Victoria M. Tran, Anush Chiappino-Pepe, Ahmed H. Badran, Ian W. Andrews, Emma J. Chory, George M. Church, Eric D. Brown, Tommi S. Jaakkola, Regina Barzilay, James J. Collins
+
+\subsection{Data}
+20 lutego 2020
+
+\subsection{Historia i przekaz główny}
+Przekaz jest taki, że interdyscyplinarność umożliwiła opracowanie nowego antybiotyku, co przypomnę, ostatni raz miało miejsce ponad 30 lat temu. Dodatkowo 8 z 23 wytypowanych związków będzie jeszcze badanych laboratoryjnie, gdyż wykazały one pożądane właściwości.
+
+\subsection{Tytuł roboczy}
+Prawdopodobnie taki jak wersji ostatecznej: “A Deep Learning Approach to Antibiotic Discovery”
+
+\subsection{Lista referencji}
+Bibliografia liczyła 70 pozycji. Zarówno dotyczących medycyny, biologii i sieci neuronowych. Najstarsza z pozycji jest z roku 1977 (A protonmotive force drives bacterial flagella) a najnowsze to kilka pozycji z roku 2019, czyli mniej niż rok przed publikacją. Pozwala to przypusczać że autorzy dogłębnie zbadali zarówno najnowsze odkrycia z medycyny (A multiplexable assay for screening antibiotic lethality against drug-tolerant bacteria) jak i zagadnień uczenia maszynowego (A white-box machine learning approach for revealing antibiotic mechanisms of action)
+
+\subsection{Wprowadzenie}
+Artykuł wprowadza nas w problem jakim są szczepy bakterii odporne na działanie antybiotyków. Następnie nakreśla pomysł jakim było wykorzystanie baz danych cząsteczek (molekuł) i wyszukanie w nich, z pomocą Uczenia Maszynowego, związków o właściwościach. Do badań laboratoryjnych wytypowano 23 związki z ponad 107 milionów (baza ZINC15).
+
+\subsection{Metody}
+Cały opisany proces liczył wiele metod:
+\begin{enumerate}
+    \item Dobór i przygotowanie danych: Zbiór uczący składał się z 2335 związków: leków zatwierdzonych przez FDA oraz naturalnych produktów, testowanych pod kątem zahamowania wzrostu Escherichia coli. Wytrenowany zaś model testował ponad 107 milionów molekuł z bazy ZINC15.
+    \item Reprezentacja molekuł: Cechy 2335 molekuł zostały zwektoryzowane a wiązania międzycząsteczkowe przedstawione w formach grafów skierowanych.
+    \item Trening i walidacja modelu: Do treningu użyto sieci konwolucyjnej a konkretnie Directed Message Passing Neural Network (D-MPNN) a skuteczność modelu oceniono głównie za pomocą krzywych ROC-AUC (wartość 0.896)
+    \item Predykcja i selekcja: z bazy ponad 107 milionów cząsteczek (molekuł) do testów empirycznych wybrano 23 związki.
+    \item Walidacja empiryczna: Przeprowadzono zarówno testy in vitro (czyli wykazano bakteriobójczość na poziomie komórkowym) jak i testy in vivo (czyli wykazano skuteczność na organizmach żywych. W tym wypadku potwierdzono skuteczność Hialicyny na myszach)
+\end{enumerate}
+
+\subsection{Wyniki}
+Wynikiem całego procesu opisanego w artykule jest niewątpliwie opracowanie Hialicyny. Dodatkową wartością są: 23 związki przeznaczone do dalszych badań laboratoryjnych, wytrenowany już model Uczenia Maszynowego oraz empiryczny dowód na to, że warto stosować algorytmy Uczenia Maszynowego w dziedzinach, gdzie pozornie nie widzi się już pola do odkryć.
+
+Sama hialicyna prócz skuteczności wobec E.Coli okazała się jeszcze wysoce skuteczna wobec A. baumannii, M. tuberculosis oraz P. aeruginos.
+
+\subsection{Dyskusja}
+Wstępem do części poświęconej dyskusji było nakreślenie problemu jakim była odporność niektórych bakterii na wcześniej znane antybiotyki. Dyskusja uzasadniała dobór danych, zastosowane metody nauki czy wytypowane predykcje.
+
+Dalsza dyskusja podkreślała niedoskonałości sieci neuronowych jak i potencjalne niskie zróżnicowanie danych. Kolejnym poruszonym problemem były już same predykcje i czy faktycznie będą one miały właściwości bakteriobójcze.
+
+W ostatnim akapicie dyskusja dawała potwierdzenie założonym wnioskom m.in. poprzez badania laboratoryjne z dziedziny biomedycznej.
+
+\subsection{Rysunki/tabele}
+Każdy z etapów przedstawiał wyniki czyniąc je czytelnymi:
+\begin{itemize}
+    \item Schemat blokowy całego postępowania udostępniony był w formie graficznej (rysunek 1.)
+    \item Wyniki walidacji treningu sieci neuronowej i najistotniejszych badań laboratoryjnych opatrzone dziewięcioma wykresami m.in. krzywe ROC-AUC, wartości OD dla 99 najlepszych predykcji, spadek rozwoju bakterii E.coli zależny od stężenia Hialicyny.
+    \item Szczegółowe wyniki badania opatrzone kilkudziesięcioma wykresami m.in. spadki liczebności pozostałych opisanych bakterii od stężenia Hialicyny.
+    \item Tabelaryczne wykazy testowanych bakterii
+    \item Tabelaryczne wykazy innych związków niż Hialicyna przeznaczonych do dalszych testów
+    \item Tabelaryczny wykaz testowanych algorytmów i modeli (m.in. Chemprop, RDKit, BWA, edgeR)
+\end{itemize}
+
+\subsection{Wnioski}
+Główne wnioski są takie:
+\begin{itemize}
+    \item Zastosowanie Uczenia Maszynowego umożliwiło opracowanie nowego antybiotyku (30 lat po ostatnim opracowanym).
+    \item Nawet wielkie zbiory danych nie muszą stanowić problemu, jeśli wytrenowany model okaże się skuteczny.
+    \item Pomimo koncentracji badań na zwalczaniu bakterii E. Coli Hialicyna okazała się również wysoce skuteczna wobec A. baumannii, M. tuberculosis oraz P. aeruginosa (prócz tego kilka innych również zostało wymienionych)
+\end{itemize}
