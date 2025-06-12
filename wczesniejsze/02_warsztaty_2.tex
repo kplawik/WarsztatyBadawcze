@@ -1,0 +1,100 @@
+\chapter{Warsztaty 2}
+\section{Tematyka}
+
+Zastosowanie sztucznej inteligencji do przewidywania struktury molekularnej antybiotyków wobec konkretnych, wybranych bakterii zaklasyfikowanych przez WHO w 2024 roku jako te najbardziej zagrażające ludzkiemu życiu.
+
+\subsection{Argumenty}
+
+\begin{enumerate}
+    \item Tematyka związana z zastosowaniem sztucznej inteligencji ogólnie w medycynie staje się coraz częściej poruszana w artykułach naukowych ze względu na coraz lepsze algorytmy, umożliwiające uzyskanie bardzo dokładnych i precyzyjnych wyników.
+    \item Niezwykle ważna tematyka z powodu wzrastającej odporności wielu bakterii na aktualnie stosowane antybiotyki, która przyczynia się rocznie do ponad 1 mln śmierci na świecie oraz może przyczynić się do 2050 roku do nawet 10 mln śmierci rocznie.
+    \item Przewidywanie struktury molekularnej antybiotyków może przyczynić się do znacznego przyśpieszenia skomplikowanego i długotrwałego procesu ich odkrywania tradycyjnymi metodami, a w konsekwencji do zmniejszenia związanych z nim kosztów.
+    \item Możliwość przewidywania struktur molekularnych antybiotyków znacznie odmiennych od tych dotychczas znanych pozwala uniknąć redundancji, a w konsekwencji zredukować czas i środki finansowe poświęcane na odkrywanie nowych antybiotyków.
+\end{enumerate}
+
+Na podstawie https://www.nature.com/articles/s41598-025-91190-x.
+
+\subsection{Rozwinięcie tematyki}
+
+\begin{enumerate}
+    \item Zastosowanie sieci neuronowych do przewidywania struktury molekularnej antybiotyków i porównanie wyników z konwencjonalnymi technikami uczenia maszynowego (np. las losowy, maszyna wektorów nośnych, naiwny klasyfikator Bayesa).
+
+    \begin{itemize}
+    \item Konwencjonalne techniki uczenia maszynowego, choć umożliwiają przewidywanie struktury molekularnej antybiotyków, są ograniczone do stosunkowo wąskiego zakresu cech molekularnych przedstawianych za pomocą tzw. wektorów fingerprint (odzwierciedlenie obecności lub braku określonych grup funkcyjnych) i deskryptorów (odzwierciedlenie określonych właściwości fizykochemicznych), które muszą być wcześniej zdefiniowane przez człowieka, posiadającego wiedzę dziedzinową. W przeciwieństwie do technik konwencjonalnych, sieci neuronowe uczą się optymalnych reprezentacji molekularnych dla konkretnego zadania predykcyjnego w sposób automatyczny.
+    \item Sieci neuronowe nie tylko przewyższają konwencjonalne techniki uczenia maszynowego w wielu zadaniach związanych z przewidywaniem właściwości fizykochemicznych i biologicznych, lecz także są bardziej odporne na zmiany i lepiej uogólniają się na przestrzenie chemiczne wykraczające poza te, na których model był pierwotnie trenowany.
+    \item Sieci neuronowe umożliwiają odkrywanie antybiotyków o odmiennej strukturze w porównaniu do aktualnie stosowanych antybiotyków (np. halicyna i wiele innych).
+    \item Odkrycie nowego antybiotyku po 30 latach stagnacji w tym obszarze  (konkretnie halicyny, charakteryzującej się odmienną strukturą molekularną w porównaniu z aktualnie stosowanymi antybiotykami oraz działaniem bakteriobójczym wobec szerokiego spektrum patogenów) zostało dokonane dzięki zastosowaniu głębokich sieci neuronowych (ang. deep neural network) \- istotna wskazówka, że do przewidywania antybiotyków przeciwko innym bakteriom warto zawsze zastosować sieci neuronowe.
+    \item Porównanie różnych technik uczenia maszynowego może umożliwić dodatkowe lepsze zrozumienie, które z nich charakteryzują się największą generalizacją, dokładnością i precyzją.
+    \end{itemize}
+    \item Zastosowanie filtrów przy przewidywaniu struktury molekularnej antybiotyków, dotyczących m.in. różnorodności strukturalnej, występowania w naturze, trudności i kosztów syntezy, a także przewidywanej toksyczności wobec komórek ludzkich.
+    \begin{itemize}
+        \item Dodatkowe filtry umożliwiają:        
+        \begin{itemize}
+            \item znaczne zredukowanie liczby przewidzianych struktur molekularnych, których może być niekiedy nawet od kilku do kilkudziesięciu tysięcy (konsekwencja przeprowadzania predykcji na zbiorach, zawierającym od kilku milionów do kilku bilionów danych);
+            \item wyeliminowanie struktur, które na etapie testów na zwierzętach mogłyby wykazać wysoką toksyczność wobec komórek, co w konsekwencji przyczynia się do oszczędności czasu i kosztów całego procesu;
+            \item ustalenie priorytetowych struktur molekularnych, które mogą być poddane najpierw testom na zwierzętach, a następnie badaniom klinicznym.
+        \end{itemize}
+        \item Filtr dotyczący przewidywania toksyczności wobec komórek ludzkich może umożliwić zastąpienie niektórych aktualnie stosowanych antybiotyków na mniej szkodliwe.
+        \item Filtr dotyczący różnorodności strukturalnej może zmniejszyć problem dereplikacji oraz zwiększyć prawdopodobieństwo odkrycia antybiotyku (np. halicyna) charakteryzującego się zupełnie nowym mechanizmem bakteriobójczego działania.
+    \end{itemize}
+\end{enumerate}
+\section{Analiza literatury}
+\begin{enumerate}
+    \item “A Deep Learning Approach to Antibiotic Discovery”
+    \begin{itemize}
+        \item Artykuł naukowy przedstawiający przełomowe odkrycie pierwszego nowego antybiotyku po 30 latach (halicyny, charakteryzującej się odmienną strukturą molekularną w porównaniu z aktualnie stosowanymi antybiotykami) poprzez przeprowadzenie najpierw analizy wielu różnych zbiorów danych z zastosowaniem głębokich sieci neuronowych, a następnie testów laboratoryjnych, które potwierdziły działanie bakteriobójcze.
+        \item Artykuł zawiera dokładne informacje dotyczące poszczególnych etapów przeprowadzonych analiz, które mogą być przydatne w celu porównania wyników własnych przeprowadzonych badań.
+        \item Artykuł został opublikowany w 2020 roku w czasopiśmie Cell, którego współczynnik impact factor jest bardzo wysoki i wynosi ok. 45,5.
+        \item Artykuł został napisany przez 18 pracowników z USA i Kanady z tytułem doktora lub profesora, specjalizujących się w wielu różnych dziedzinach, w tym farmacji, genetyki, biotechnologii i sztucznej inteligencji.
+        \item Liczba cytowań artykułu wynosi 1,312.
+    \end{itemize}
+    \item “Artificial Intelligence (AI) Applications in Drug Discovery and Drug Delivery: Revolutionizing Personalized Medicine”
+    \begin{itemize}
+        \item Artykuł przeglądowy omawiający zastosowanie sztucznej inteligencji w odkrywaniu nowych leków i systemów dostarczania leków, zawiera: analizę zagadnienia z kilku różnych stron (np. walidacji, optymalizacji i konkretnych baz danych),  także wiele konkretnych przykładów.
+        \item Artykuł został opublikowany niedawno, tj. w sierpniu 2024 roku, w związku z tym zawiera wiele aktualnych informacji.
+        \item Artykuł został opublikowany w czasopiśmie pharmaceutics, którego współczynnik impact factor wynosi ok. 4,9.
+        \item Artykuł został napisany przez 8 pracowników naukowych z 3 różnych krajów (Wielka Brytania, Hiszpania, Indie) z tytułem doktora lub profesora, specjalizujących się w wielu różnych dziedzinach, w tym farmacji, nanomedycynie, druku 3D oraz chemii polimerów i peptydów.
+        \item Liczba cytowań artykułu wynosi 44.
+    \end{itemize}
+    \item “Artificial intelligence to deep learning: machine intelligence approach for drug discovery”
+    \begin{itemize}
+        \item Artykuł przeglądowy omawiający bardziej szczegółowo zastosowanie sztucznej inteligencji w odkrywaniu nowych leków – porusza dodatkowo tematykę związaną m.in. z analizą danych ekspresji genów i mutacji, optymalizacją dawkowania, znajdowaniem nowych zastosowań istniejących już leków, oraz symulacją dynamiki molekularnej. 
+        \item Artykuł zawiera m.in. informacje o różnych baz danych medycznych i chemiczny oraz narzędziach (np. AlphaFold do predykcji struktury peptydów)
+        \item Artykuł został opublikowany w 2021 roku w czasopiśmie Molecular Diversity, którego współczynnik impact factor wynosi ok. 3,8.
+        \item Artykuł został napisany przez 5 z Indii z tytułem doktora lub profesora, specjalizujących się w biotechnologii.
+        \item Liczba cytowań artykułu wynosi 796.
+    \end{itemize}
+\end{enumerate}
+\section{Refleksja}
+\begin{enumerate}
+    \item Rozpowszechnianie i popularyzowanie wiedzy naukowej (pod warunkiem, że wiedza ta jest dla wszystkich darmowa)
+        \begin{itemize}
+            \item Zwiększanie poziomu wiedzy i świadomości w społeczeństwie.
+            \item Przyśpieszenie rozwoju nauki i technologii przydatnej społeczeństwu.
+            \item Tworzenie baz danych, stanowiących podstawę kolejnych nowych badań.
+        \end{itemize}
+        \item Weryfikowanie badań
+        \begin{itemize}
+            \item Weryfikowanie metodologii i wyników badań przez recenzentów w celu oceny ich rzetelności i jakości.
+            \item Powtarzanie, weryfikowanie i rozwijanie badań przez innych pracowników naukowych.
+            \item Zwiększanie wiarygodności i sprzyjanie postępowi naukowemu poprzez weryfikację i dalsze rozwijanie.
+        \end{itemize}
+    \item Zwiększenie rozpoznawalności pracownika naukowego
+        \begin{itemize}
+            \item Budowanie reputacji naukowej poprzez publikowanie efektów pracy badawczej (również w krajach mniej zamożnych).
+            \item Zwiększanie szans na współpracę, udział w projektach i konferencjach dzięki większej rozpoznawalności w środowisku naukowym.
+            \item Rozwój kariery naukowej poprzez i poszerzanie kompetencji poprzez regularne publikowanie artykułów.
+        \end{itemize}
+    \item Praktyczne zastosowanie wyników badań
+        \begin{itemize}
+            \item Zastosowanie niektórych rozwiązań z artykułów naukowych w m.in. przemyśle i medycynie.
+            \item Transfer technologii i współpraca między jednostkami naukowymi a sektorem gospodarczym w celu komercjalizacji wyników badań.
+            \item Poprawa poziomu życia społeczeństwa.
+        \end{itemize}
+    \item Obowiązek wobec finansowania badań
+        \begin{itemize}
+            \item Zapewnienie dostępu do wyników badań finansowanych ze środków publicznych lub grantów.
+            \item Umożliwienie społeczeństwu korzystania z efektów badań, które współfinansuje.
+            \item Wzmacnianie przejrzystości i odpowiedzialności pracowników naukowych wobec instytucji wspierających badania.
+        \end{itemize}
+\end{enumerate}

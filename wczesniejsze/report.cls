@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\LoadClass[12pt,a4paper,authortitle]{mwart}
+\LoadClass[12pt,a4paper,authortitle]{mwrep}
 \usepackage[OT4]{polski}
 \usepackage{url}
 
@@ -57,7 +57,7 @@
 
 \newcommand\coursesemesterfield{Semestr}
 
-\renewcommand{\@maketitle}{%
+\renewcommand{\maketitle}{%
   \newpage
   \null
   \includegraphics[scale=0.8]{ftims_logo}
@@ -94,7 +94,7 @@
  % \begin{center}%
  % \vskip 5\baselineskip
  % \@typesetexamdate%
- % \end{center}%
+   \end{center}%
 
   \par
   \vskip 1\baselineskip
